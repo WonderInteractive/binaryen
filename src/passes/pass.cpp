@@ -363,7 +363,7 @@ void PassRegistry::registerPasses() {
 // Outlining currently relies on LLVM's SuffixTree, which we can't rely upon
 // when building Binaryen for Emscripten.
 #ifndef SKIP_OUTLINING
-  registerPass("outlining", "outline instructions", createOutliningPass);
+  //registerPass("outlining", "outline instructions", createOutliningPass);
 #endif
   registerPass("pick-load-signs",
                "pick load signs based on their uses",
