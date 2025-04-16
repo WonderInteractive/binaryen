@@ -140,10 +140,8 @@ set(passes_SOURCES
 # The below condition is intended for removal once the suffix_tree and
 # suffix_tree_node source files no longer depend on LLVM code in the
 # third_party folder
-if(EMSCRIPTEN)
   list(REMOVE_ITEM passes_SOURCES ${CMAKE_CURRENT_BINARY_DIR}/stringify-walker.h)
   list(REMOVE_ITEM passes_SOURCES ${CMAKE_CURRENT_BINARY_DIR}/stringify-walker-impl.h)
   list(REMOVE_ITEM passes_SOURCES "hash-stringify-walker.cpp")
   list(REMOVE_ITEM passes_SOURCES "Outlining.cpp")
-endif()
 target_sources(binaryen PRIVATE ${passes_SOURCES})
